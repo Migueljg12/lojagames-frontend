@@ -1,0 +1,25 @@
+.bgc {
+  background-color: black;
+  color: white;
+}
+.texto-Personalizado {
+  color: white;
+  text-decoration: red;
+  font-size: 1.3rem;
+}
+
+.botão-de-menu {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: black;
+  background-color: rgba(206, 18, 18, 0.76);
+  padding: 0.5rem;
+  border: solid;
+  border-color: rgb(247, 247, 247);
+  position: absolute;
+  border-radius: 1rem;
+  border-width: 0.6rem;
+  margin-top: 1rem;
+  margin-left: 15px;
+  font-family: MV Boli, bold;
+}

@@ -1,0 +1,58 @@
+<div class="body">
+  <form [formGroup]="formularioJogo" class="row" (submit)="upload()">
+    <div class="col-md-6 text-center">
+      <img
+        src="assets/img/logo_geracao_games.png"
+        alt="imagem do mario no seu carrinho com a logo loja de games"
+      />
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <input
+          formControlName="gameName"
+          class="form-control"
+          placeholder="Nome do jogo"
+        />
+        <app-mensagem
+          *ngIf="
+            formularioJogo.get('gameName')?.errors?.required &&
+            formularioJogo.get('gameName')?.touched
+          "
+          mensagem="Nome do jogo é obrigatorio!"
+        ></app-mensagem>
+      </div>
+      <div class="formgroup">
+        <input
+          formControlName="category"
+          class="form-control"
+          placeholder="Categoria"
+        />
+      </div>
+      <div class="form-group stock-design">
+        <input
+          type="number"
+          formControlName="stock"
+          class="form-control"
+          placeholder="Quantidade do estoque!"
+        />
+      </div>
+      <div class="form-group">
+        <textarea
+          formControlName="description"
+          class="form-control"
+          placeholder="Descrição do jogo!"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <input
+          formControlName="price"
+          class="form-control"
+          placeholder="Preço do jogo!"
+        />
+      </div>
+    </div>
+    <button type="submit" class="btn btn-danger btn-block botão-design">
+      Salvar
+    </button>
+  </form>
+</div>

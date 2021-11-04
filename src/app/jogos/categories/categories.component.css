@@ -1,0 +1,14 @@
+.editar {
+  position: absolute;
+  margin-left: 1rem;
+  margin-top: 5rem;
+  background-position-x: 1rem;
+}
+
+.categoria {
+  color: blueviolet;
+  font-family: "comic sans MS";
+  font-size: 3rem;
+  margin-left: 16rem;
+  margin-top: -2rem;
+}

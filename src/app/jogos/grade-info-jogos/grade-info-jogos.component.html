@@ -1,0 +1,18 @@
+<div class="row bgc">
+  <div *ngFor="let jogo of jogos" class="col-3">
+    <a [routerLink]="['/jogos', jogo._id]" class="link">
+      <app-cartao class="px-1">
+        <a>Nome do jogo: {{ jogo.gameName }}</a
+        ><br /><br />
+        <p>
+          Categoria: {{ jogo.category[0]?.category }}
+          {{ jogo.category[1]?.category }}
+        </p>
+        <p>Preço: R$ {{ jogo.price }}</p>
+        <p>Estoque: {{ jogo.stock }}</p>
+        <p class="testando">Descrição: {{ jogo.description }}</p>
+        <i aria-hidden="true" class="fa fa-cart-plus"></i>
+      </app-cartao>
+    </a>
+  </div>
+</div>

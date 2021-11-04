@@ -1,0 +1,84 @@
+<div class="body">
+  <h4 class="text-center text-danger">Cadastre-se e compre nossos jogos!</h4>
+
+  <form [formGroup]="novoUsuarioForm" (submit)="cadastrar()">
+    <div class="form-group">
+      <input placeholder="email" class="form-control" formControlName="email" />
+      <app-mensagem
+        *ngIf="
+          novoUsuarioForm.get('email')?.errors?.required &&
+          novoUsuarioForm.get('email')?.touched
+        "
+        mensagem="Email obrigatório"
+      ></app-mensagem>
+      <app-mensagem
+        *ngIf="
+          novoUsuarioForm.get('email')?.errors?.email &&
+          novoUsuarioForm.get('email')?.touched
+        "
+        mensagem="Email no formato incorreto."
+      ></app-mensagem>
+      <app-mensagem
+        *ngIf="novoUsuarioForm.get('email')?.errors?.usuarioExistente"
+        mensagem="Email já existe"
+      ></app-mensagem>
+    </div>
+    <div class="form-group">
+      <input placeholder="Nome" class="form-control" formControlName="name" />
+      <app-mensagem
+        *ngIf="
+          novoUsuarioForm.get('name')?.errors &&
+          novoUsuarioForm.get('name')?.touched
+        "
+        mensagem="Nome Incorreto."
+      ></app-mensagem>
+      <app-mensagem
+        *ngIf="
+          novoUsuarioForm.get('name')?.errors?.minusculo &&
+          novoUsuarioForm.get('name')?.touched
+        "
+        mensagem="Nome deve ser minusculo!"
+      ></app-mensagem>
+    </div>
+    <div class="form-group">
+      <input placeholder="CPF" class="form-control" formControlName="cpf" />
+      <app-mensagem
+        *ngIf="
+          novoUsuarioForm.get('cpf')?.errors &&
+          novoUsuarioForm.get('cpf')?.touched
+        "
+        mensagem="Cpf deve conter 11 digitos."
+      ></app-mensagem>
+      <app-mensagem
+        *ngIf="
+          novoUsuarioForm.get('cpf')?.errors?.required &&
+          novoUsuarioForm.get('cpf')?.touched
+        "
+        mensagem="CPF obrigatório"
+      >
+      </app-mensagem>
+      <app-mensagem
+        *ngIf="novoUsuarioForm.get('cpf')?.errors?.usuarioExistente"
+        mensagem="CPF já existe"
+      ></app-mensagem>
+    </div>
+    <div class="form-group">
+      <input
+        placeholder="Senha"
+        type="password"
+        class="form-control"
+        formControlName="password"
+      />
+      <app-mensagem
+        *ngIf="novoUsuarioForm.errors?.senhaIgualUsuario"
+        mensagem="Senha não pode ser igual ao nome"
+      ></app-mensagem>
+    </div>
+
+    <button class="btn btn-danger btn-block">Cadastro</button>
+  </form>
+
+  <p class="text-light">
+    Já é um usuário? <a [routerLink]="['']"> Faça login!</a>
+  </p>
+</div>
