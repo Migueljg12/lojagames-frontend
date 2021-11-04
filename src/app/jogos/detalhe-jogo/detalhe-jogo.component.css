@@ -1,0 +1,74 @@
+@font-face {
+  font-family: fontePersonalizada;
+  src: url("//db.onlinewebfonts.com/t/0c1daa5d5bb8782f2128d9c76bcb2f10.eot");
+  src: url("//db.onlinewebfonts.com/t/0c1daa5d5bb8782f2128d9c76bcb2f10.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/0c1daa5d5bb8782f2128d9c76bcb2f10.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/0c1daa5d5bb8782f2128d9c76bcb2f10.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/0c1daa5d5bb8782f2128d9c76bcb2f10.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/0c1daa5d5bb8782f2128d9c76bcb2f10.svg#CCTreacherousCorners")
+      format("svg");
+}
+
+.personalizar-nome {
+  font-size: 6em;
+  font-family: fontePersonalizada;
+  text-align: center;
+  padding-left: 2rem;
+  color: rgba(228, 0, 0, 0.842);
+}
+
+.personalizar-price {
+  font-size: 3rem;
+  color: yellowgreen;
+  margin-top: 3.8rem;
+  margin-left: 3rem;
+}
+
+.personalizar-descrição {
+  background-color: rgb(143, 25, 25);
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+}
+
+.fundoTotal {
+  background-color: black;
+}
+
+.personalizar-categoria {
+  color: blueviolet;
+  font-family: "comic sans MS";
+  font-size: 3rem;
+  margin-left: 16rem;
+  margin-top: -2rem;
+}
+
+.texto-Personalizado {
+  font-size: 1em;
+  font-family: arial black;
+}
+
+.label-personalizada {
+  font-size: 2rem;
+  margin-left: 6rem;
+  margin-top: 5rem;
+  color: blueviolet;
+}
+
+.personalizar-stock {
+  color: rgb(155, 155, 5);
+  overflow: hidden;
+  margin-top: 1rem;
+  margin-left: 30rem;
+  font-size: 2rem;
+}
+
+.lixeira {
+  margin-top: 11rem;
+  margin-left: -1.2em;
+  color: red;
+}

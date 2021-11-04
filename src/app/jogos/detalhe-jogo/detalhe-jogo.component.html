@@ -1,0 +1,19 @@
+<div class="fundoTotal border" *ngIf="jogos | async as jogo">
+  <div class="row">
+    <div class="col-lg-7">
+      <p class="personalizar-nome">Jogo: {{ jogo.gameName }}</p>
+      <label for="[categoria]" class="label-personalizada"> Categoria:</label>
+      <app-categories [id]="jogo.category[0]._id"></app-categories>
+      <p class="personalizar-stock">Estoque: {{ jogo.stock }}</p>
+      <p class="personalizar-price">R$ {{ jogo.price }}</p>
+    </div>
+    <div class="col-lg-3 personalizar-descrição">
+      <div class="text-left break-word text-center">
+        <label class="texto-Personalizado">Descrição</label>
+        <br />
+        {{ jogo.description }}
+      </div>
+      <i (click)="excluir()" class="fa fa-trash-o fa-2x lixeira"></i>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<input
+  type="text"
+  #editar
+  hidden
+  class="editar"
+  placeholder="Nova
+  Categoria"
+  (keyup.enter)="editando(editar)"
+/>
+<!-- <input type="submit" (click)="editando(editar)" (click)="editando('opi')" /> -->
+
+<div *ngIf="categories$ | async as categories">
+  <p (click)="mostrar(false)" class="categoria">
+    {{ categories.category }}
+  </p>
+</div>
